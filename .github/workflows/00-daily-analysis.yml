@@ -64,6 +64,7 @@ jobs:
           # ==========================================
           # AI 配置
           # ==========================================
+          YFINANCE_PRIORITY: ${{ vars.YFINANCE_PRIORITY || secrets.YFINANCE_PRIORITY || '0' }}
           GENERATION_BACKEND: ${{ vars.GENERATION_BACKEND || secrets.GENERATION_BACKEND }}
           GENERATION_FALLBACK_BACKEND: ${{ vars.GENERATION_FALLBACK_BACKEND || secrets.GENERATION_FALLBACK_BACKEND || 'litellm' }}
           GENERATION_BACKEND_TIMEOUT_SECONDS: ${{ vars.GENERATION_BACKEND_TIMEOUT_SECONDS || secrets.GENERATION_BACKEND_TIMEOUT_SECONDS }}
